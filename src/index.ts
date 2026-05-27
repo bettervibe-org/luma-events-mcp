@@ -20,6 +20,7 @@ import { registerSendInvites } from "./tools/send-invites.js";
 import { registerUpdateEvent } from "./tools/update-event.js";
 import { registerUpdateGuestStatus } from "./tools/update-guest-status.js";
 import { registerUpdateTicketType } from "./tools/update-ticket-type.js";
+import { registerUploadImage } from "./tools/upload-image.js";
 
 const server = new McpServer({
 	name: "luma-events-mcp",
@@ -58,6 +59,7 @@ async function main() {
 	registerDeleteTicketType(client, server);
 	registerListCoupons(client, server);
 	registerCreateCoupon(client, server);
+	registerUploadImage(client, server);
 
 	const transport = new StdioServerTransport();
 	await server.connect(transport);

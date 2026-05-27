@@ -303,6 +303,18 @@ Parameters:
 
 Returns:
 - The created coupon object
+
+### upload-image
+
+Upload a local image file to Luma's CDN and return the final URL. Reads the file from disk, obtains a presigned upload URL, PUTs the binary, and returns the CDN URL.
+
+Parameters:
+- `file_path`: string — Absolute path to the local image file to upload
+- `purpose`: string — Upload purpose (e.g. "event-cover", "avatar")
+- `content_type`: string (optional) — MIME type of the image (default: "image/png")
+
+Returns:
+- The Luma CDN URL for the uploaded image
 <!-- TOOLS:END -->
 
 ## License
