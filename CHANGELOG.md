@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/bettervibe-org/luma-events-mcp/compare/v1.0.0...v1.1.0) (2026-05-27)
+
+
+### Features
+
+* add upload-image tool for Luma CDN uploads ([d4c4c3e](https://github.com/bettervibe-org/luma-events-mcp/commit/d4c4c3ec9d0d32ad0f74e491dc413175022da270))
+
 # 1.0.0 (2026-05-27)
 
 
