@@ -23,6 +23,10 @@ A Luma Calendar MCP server exposing event, guest, and ticket operations as tools
 
 ## Setup
 
+Add the server to your MCP client config. Get your API key from your Luma dashboard (requires Luma Plus).
+
+### With inline API key
+
 ```json
 {
   "mcpServers": {
@@ -37,7 +41,24 @@ A Luma Calendar MCP server exposing event, guest, and ticket operations as tools
 }
 ```
 
-Get your API key from your Luma dashboard (requires Luma Plus).
+### With a `.env` file
+
+Keep your API key in a `.env` file (gitignored) and use [`dotenvx`](https://dotenvx.com) to load it:
+
+```
+LUMA_API_KEY=your-api-key
+```
+
+```json
+{
+  "mcpServers": {
+    "luma": {
+      "command": "npx",
+      "args": ["@dotenvx/dotenvx", "run", "--", "npx", "luma-events-mcp"]
+    }
+  }
+}
+```
 
 ## Development
 
