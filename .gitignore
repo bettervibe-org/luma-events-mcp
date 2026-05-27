@@ -1,0 +1,13 @@
+.env
+
+.idea
+
+.claude/settings.local.json
+
+node_modules
+
+# build
+dist
+
+# test coverage
+coverage
