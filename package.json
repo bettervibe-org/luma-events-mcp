@@ -2,7 +2,7 @@
 	"name": "luma-events-mcp",
 	"mcpName": "io.github.bettervibe-org/luma-events-mcp",
 	"description": "A Luma Calendar MCP server exposing event, guest, and ticket operations as tools for AI assistants.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"main": "dist/index.js",
 	"type": "module",
 	"bin": {
