@@ -245,6 +245,38 @@ Parameters:
 Returns:
 - The created ticket type object
 
+### update-ticket-type
+
+Update an existing ticket type
+
+Parameters:
+- `event_ticket_type_api_id`: string — Ticket type ID (e.g. ett-...)
+- `name`: string (optional) — Ticket type name
+- `require_approval`: boolean (optional) — Require host approval
+- `is_hidden`: boolean (optional) — Hide from public listing
+- `description`: string (optional) — Ticket type description
+- `valid_start_at`: string (optional) — ISO 8601 start date for ticket sales
+- `valid_end_at`: string (optional) — ISO 8601 end date for ticket sales
+- `max_capacity`: number (optional) — Maximum tickets available
+- `type`: enum (`free` | `paid`) (optional) — Ticket pricing type
+- `cents`: number (optional) — Price in cents (for paid tickets)
+- `currency`: string (optional) — Currency code (e.g. USD, EUR)
+- `is_flexible`: boolean (optional) — Allow flexible pricing
+- `min_cents`: number (optional) — Minimum price in cents (for flexible pricing)
+
+Returns:
+- The updated ticket type object
+
+### delete-ticket-type
+
+Delete a ticket type (soft-delete). Cannot delete if tickets have been sold or if it is the last visible ticket type.
+
+Parameters:
+- `event_ticket_type_api_id`: string — Ticket type ID (e.g. ett-...)
+
+Returns:
+- Confirmation of the deleted ticket type
+
 ### list-coupons
 
 List all coupons for an event. Without pagination params, returns all coupons; with them, returns one page.
