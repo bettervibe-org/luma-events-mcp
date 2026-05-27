@@ -8,6 +8,7 @@ import { registerAddGuests } from "./tools/add-guests.js";
 import { registerCreateCoupon } from "./tools/create-coupon.js";
 import { registerCreateEvent } from "./tools/create-event.js";
 import { registerCreateTicketType } from "./tools/create-ticket-type.js";
+import { registerDeleteTicketType } from "./tools/delete-ticket-type.js";
 import { registerGetCalendar } from "./tools/get-calendar.js";
 import { registerGetEvent } from "./tools/get-event.js";
 import { registerGetGuest } from "./tools/get-guest.js";
@@ -18,6 +19,7 @@ import { registerListTicketTypes } from "./tools/list-ticket-types.js";
 import { registerSendInvites } from "./tools/send-invites.js";
 import { registerUpdateEvent } from "./tools/update-event.js";
 import { registerUpdateGuestStatus } from "./tools/update-guest-status.js";
+import { registerUpdateTicketType } from "./tools/update-ticket-type.js";
 
 const server = new McpServer({
 	name: "luma-events-mcp",
@@ -52,6 +54,8 @@ async function main() {
 	registerUpdateGuestStatus(client, server);
 	registerSendInvites(client, server);
 	registerCreateTicketType(client, server);
+	registerUpdateTicketType(client, server);
+	registerDeleteTicketType(client, server);
 	registerListCoupons(client, server);
 	registerCreateCoupon(client, server);
 

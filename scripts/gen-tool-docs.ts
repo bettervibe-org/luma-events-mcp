@@ -8,6 +8,7 @@ import { addGuestsDefinition } from "../src/tools/add-guests.js";
 import { createCouponDefinition } from "../src/tools/create-coupon.js";
 import { createEventDefinition } from "../src/tools/create-event.js";
 import { createTicketTypeDefinition } from "../src/tools/create-ticket-type.js";
+import { deleteTicketTypeDefinition } from "../src/tools/delete-ticket-type.js";
 import { getCalendarDefinition } from "../src/tools/get-calendar.js";
 import { getEventDefinition } from "../src/tools/get-event.js";
 import { getGuestDefinition } from "../src/tools/get-guest.js";
@@ -18,6 +19,7 @@ import { listTicketTypesDefinition } from "../src/tools/list-ticket-types.js";
 import { sendInvitesDefinition } from "../src/tools/send-invites.js";
 import { updateEventDefinition } from "../src/tools/update-event.js";
 import { updateGuestStatusDefinition } from "../src/tools/update-guest-status.js";
+import { updateTicketTypeDefinition } from "../src/tools/update-ticket-type.js";
 
 type ToolDefinition = {
 	name: string;
@@ -39,6 +41,8 @@ const TOOLS: ToolDefinition[] = [
 	updateGuestStatusDefinition,
 	sendInvitesDefinition,
 	createTicketTypeDefinition,
+	updateTicketTypeDefinition,
+	deleteTicketTypeDefinition,
 	listCouponsDefinition,
 	createCouponDefinition,
 ];
